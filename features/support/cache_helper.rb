@@ -21,7 +21,7 @@ class Cache_Helper
       if File.directory? child_path
         :directory
       else
-        Digest::MD5.file(child_path)
+        Digest(:MD5).file(child_path)
       end
     end
 
